@@ -1,4 +1,4 @@
-import org.bruno.entitidades.InterpretadorExtratoEmCSV;
+import org.bruno.entitidades.ConverteExtratoCSVParaTransacoes;
 import org.bruno.entitidades.TransacaoBancaria;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -8,15 +8,14 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class InterpretadorExtratoEmCSVTest {
-    private static InterpretadorExtratoEmCSV interpretadorTeste;
+public class ConverteExtratoCSVParaTransacoesTest {
+    private static ConverteExtratoCSVParaTransacoes interpretadorTeste;
 
     @BeforeAll
     public static void setUp(){
-        interpretadorTeste = new InterpretadorExtratoEmCSV();
+        interpretadorTeste = new ConverteExtratoCSVParaTransacoes();
     }
 
     @AfterAll
@@ -65,6 +64,7 @@ public class InterpretadorExtratoEmCSVTest {
            Assertions.assertEquals(transacoesEsperadasMes1.get(i).getData(), transacoesMes1.get(i).getData());
            Assertions.assertEquals(transacoesEsperadasMes1.get(i).getcategoria(), transacoesMes1.get(i).getcategoria());
        }
+
 
         Month mes2 = Month.FEBRUARY;
         List<TransacaoBancaria> transacoesMes2 = interpretadorTeste.getTransacoesDoMes(transacoes, mes2);

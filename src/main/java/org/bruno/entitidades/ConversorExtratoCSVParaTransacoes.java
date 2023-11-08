@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InterpretadorExtratoEmCSV implements InterpretadorDeExtrato {
+public class ConverteExtratoCSVParaTransacoes implements InterpretadorDeExtrato {
     private static final DateTimeFormatter PADRAO_DATA = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     @Override

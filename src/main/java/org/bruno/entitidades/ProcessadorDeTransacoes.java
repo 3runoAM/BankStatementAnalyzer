@@ -3,10 +3,10 @@ package org.bruno.entitidades;
 import java.time.Month;
 import java.util.List;
 
-public class ProcessaTransacoes {
+public class ProcessadorTransacoes {
     private final List<TransacaoBancaria> transacoes;
 
-    public ProcessaTransacoes(List<TransacaoBancaria> transacoes){
+    public ProcessadorTransacoes(List<TransacaoBancaria> transacoes){
         this.transacoes = transacoes;
     }
 
